@@ -1,0 +1,282 @@
+/* FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+/* VARIÁVEIS DE CORES */
+:root {
+    /* PADRÃO DE CORES PRETO*/
+    --mainTitle: #151515;
+    --sectionColor: #222324;
+    --borderColor: #0f0e0d;
+    --backgroundRight: #161718;
+    --backgroundLeft: #495057;
+    --btnHover: #222324;
+    --userNcomputer: #343a40;
+    --imgHover: #0f0e0d;
+
+    /* PADRÃO DE CORES ROXO - APENAS ADICIONAR "2" NO FINAL DAS VARIÁVEIS CASO QUEIRA VER COMO FICA! */
+    --mainTitle2: purple;
+    --sectionColor2: rgb(139, 89, 158);
+    --borderColor2: purple;
+    --backgroundRight2: #26109eda;
+    --backgroundLeft2: #9c2c8dd8;
+    --btnHover2: #9c2c8d;
+    --userNcomputer2: rgb(110, 43, 110);
+    --imgHover2: rgba(128, 0, 128, 0.5);
+    
+    --green: rgb(31, 165, 31);
+    --gray: rgb(173, 173, 172);
+    --red: rgb(226, 37, 37);
+}
+
+/* RESET */
+* {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	background: linear-gradient(120deg, var(--backgroundLeft), var(--backgroundRight));
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/*BARRA DO TÍTULO*/
+.mainTitle {
+    background-color: var(--mainTitle);
+    color: #fff;
+    padding: 1rem 1.8rem;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mainTitle img{
+    width: 25px;
+    height: 25px;
+    margin: 0 12px;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.mainTitle h2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+}
+
+/*CONTEÚDO*/
+.content {
+    padding: 1rem 0;
+}
+
+/*CAMPO DE INPUT PARA O USUÁRIO ADICIONAR UM NOME*/
+.userInput {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#nameInput {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+/*BOTÃO PARA APLICAR O NOME ESCOLHIDO*/
+#nameBtn {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: var(--borderColor);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nameBtn:hover {
+    background-color: var(--btnHover);
+    border: 1px solid var(--borderColor);
+}
+
+/*PLACAR + BOTÃO DE RESET*/
+.placar {
+    font-size: 1.4rem;
+    background-color: var(--sectionColor);
+    padding: 6px 25px;
+    border: 1px solid var(--borderColor);
+    width: 300px;
+    margin: 1.8rem auto 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+
+}
+#v {
+    color: var(--green);
+}
+
+#e {
+    color: var(--gray);
+}
+
+#d {
+    color: var(--red);
+}
+
+#resetBtn {
+    background-color: var(--borderColor);
+    border: none;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+}
+
+#resetBtn img {
+    width: 25px;
+    height: 25px;
+}
+
+#resetBtn:hover {
+    background-color: var(--btnHover);
+    
+}
+
+/*QUADRO DE RESULTADOS*/
+.results {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 3rem 0;
+    border: 3px solid var(--borderColor);
+    padding: 1.5rem; 
+    background-color: var(--sectionColor);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+    border-radius: 0.4rem;
+}
+
+.results img {
+    width: 200px;
+}
+
+.results p {
+    margin-top: 1rem;
+    font-weight: bold;
+    width: 100%;
+    padding: 10px 0;
+    background-color: var(--userNcomputer);
+    border: 1px solid var(--borderColor);
+    border-radius: 1.4rem;
+    align-items: center;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* DECORAÇÃO + MSG NO MEIO DO QUADRO DE RESULTADOS*/
+#X {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 2rem;
+    width: 200px;
+    
+}
+
+#msg {
+    font-weight: bold;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+}
+
+/*INVERTER (ESPELHAR) IMAGEM DO COMPUTADOR*/
+.computer img {
+    transform: scaleX(-1);
+}
+
+/*ANIMAÇÕES DE ESCALA PARA AS IMAGENS DO QUADRO DE RESULTADOS*/
+.animation1 {
+    animation-name: scaleAnimate1;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+.animation2 {
+    animation-name: scaleAnimate2;
+    animation-duration: 0.8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scaleAnimate1 {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.93);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleAnimate2 {
+    0%{
+        transform: scaleX(-1) scale(1);
+    }
+    50%{
+        transform: scaleX(-1) scale(0.93);
+    }
+    100%{
+        transform: scaleX(-1) scale(1);
+    }
+}
+
+/*ESCOLHAS PARA SELECIONAR*/
+h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.options span {
+    font-weight: 500;
+    margin-top: 0.8rem;
+    display: block;
+}
+
+.options img {
+    width: 100px;
+    margin: 0 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 250ms ease-in-out;
+}
+
+.options span {
+    background-color: var(--userNcomputer);
+    border: solid 1px var(--borderColor);
+    padding: 10px;
+}
+
+.options img:hover {
+    box-shadow: 0 0 10px 5px var(--imgHover);
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jokenpô</title>
+        <!--CHAMAR CSS-->
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+        <link rel="icon" href="assets/imgs/icon.png">
+    </head>
+    <body>
+        <div class="container">
+            <!--BARRA DO JOGO-->
+            <div class="mainTitle">
+                <img src="assets/imgs/icon.png">
+                <h2>Jokenpô</h2>
+                <img src="assets/imgs/icon.png">
+            </div>
+            <!--CONTEÚDO-->
+            <div class="content">
+                <!--ADICIONAR NOME DE USUÁRIO-->
+                <div class="userInput">
+                    <input type="text" id="nameInput" placeholder="Digite seu nome" maxlength="20">
+                    <button id="nameBtn">Aplicar</button>
+                </div>
+                <!--PLACAR + BOTAO DE RESETAR-->
+                <div class="placar">
+                    <span id="v">V: 0 |</span>
+                    <span id="e">E: 0 |</span>
+                    <span id="d">D: 0</span>
+                    <button id="resetBtn">
+                        <img src="assets/imgs/reset.png" alt="reset icon">
+                    </button>
+                </div>
+                <!--QUADRO DE RESULTADOS DO JOGO-->
+                <div class="results">
+                    <div class="user">
+                        <img src="assets/imgs/pedra.png" class="animation1">
+                        <p>Usuário</p>
+                    </div>
+                    <div>
+                        <div id="msg"></div>
+                        <div id="X">X</div>
+                    </div>
+                    <div class="computer">
+                        <img src="assets/imgs/pedra.png" class="animation2">
+                        <p>Computador</p>
+                    </div>
+                </div>
+                <!--OPÇÕES PARA SELECIONAR-->
+                <h3>Escolha:</h3>
+                <div class="options">
+                    <div class="opt-tesoura">
+                        <img src="assets/imgs/tesoura.png" data-id="tesoura">
+                        <span>Tesoura</span>
+                    </div>
+                    <div class="opt-pedra">
+                        <img src="assets/imgs/pedra.png" data-id="pedra">
+                        <span>Pedra</span>
+                    </div>
+                    <div class="opt-papel">
+                        <img src="assets/imgs/papel.png" data-id="papel">
+                        <span>Papel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--CHAMAR JAVASCRIPT-->
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
